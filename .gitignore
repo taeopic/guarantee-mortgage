@@ -1,0 +1,6 @@
+assets/scraped/pages/
+assets/scraped/_raw-contact.json
+_build_pages.py
+site/CNAME
+*.pyc
+__pycache__/

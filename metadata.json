@@ -1,0 +1,89 @@
+{
+  "slug": "guarantee-mortgage",
+  "business_name": "Guarantee Mortgage, LLC",
+  "tagline": "We Shop Lenders. You Win the Rate.",
+  "industry": "Mortgage Broker",
+  "industry_vertical": "Residential Real Estate Lending",
+  "source_url": "https://guaranteemc.com/",
+  "owner_principal": "Dean Kennemer (NMLS 248739)",
+  "nmls_company": "279696",
+  "contact": {
+    "phone_primary": "(979) 977-3900",
+    "phone_secondary": "(281) 385-5511",
+    "email": "Team@guaranteemc.com"
+  },
+  "offices": [
+    {
+      "name": "College Station Office",
+      "address": "6744 Victoria Ave",
+      "city": "College Station",
+      "state": "TX",
+      "zip": "77845",
+      "phone": "(979) 977-3900",
+      "serving": "Bryan, College Station, Brazos Valley"
+    },
+    {
+      "name": "Mont Belvieu Office",
+      "address": "2770 North Farm to Market 565 Road",
+      "city": "Mont Belvieu",
+      "state": "TX",
+      "zip": "77523",
+      "phone": "(281) 385-5511",
+      "serving": "Houston metro, Baytown, Crosby, Chambers County"
+    }
+  ],
+  "brand_colors": {
+    "primary_navy": "#0f2545",
+    "accent_gold": "#c9a449",
+    "accent_warm": "#d97742",
+    "neutral_cream": "#f6f1e7",
+    "ink": "#1a1a1a"
+  },
+  "team": [
+    {"name": "Dean Kennemer", "nmls": "248739", "role": "Owner / Senior Loan Officer", "photo": "team-dean-kennemer.webp"},
+    {"name": "Connie Daniels", "nmls": "1232992", "role": "Loan Officer", "photo": "team-connie-daniels.webp"},
+    {"name": "Colton Rembert", "nmls": "1846660", "role": "Loan Officer", "photo": "team-colton-rembert.webp"},
+    {"name": "Kayla Brock", "nmls": "2377487", "role": "Loan Officer", "photo": "team-kayla-brock.webp"},
+    {"name": "Blake Hutto", "nmls": "1655572", "role": "Loan Officer", "photo": "team-blake-hutto.webp"},
+    {"name": "Stephen Owens", "nmls": "929204", "role": "Loan Officer", "photo": "team-stephen-owens.jpg"},
+    {"name": "Bryce Kennemer", "nmls": "180843", "role": "Loan Officer", "photo": null},
+    {"name": "Jerod Rosenbarker", "nmls": "2535862", "role": "Loan Officer", "photo": "team-jerod-rosenbarker.webp"},
+    {"name": "Hong Liu", "nmls": "2318560", "role": "Loan Officer", "photo": "team-hong-liu.webp"},
+    {"name": "Royce Horn", "nmls": "1862578", "role": "Loan Officer", "photo": "team-royce-horn.webp"},
+    {"name": "Parker Speer", "nmls": "2444550", "role": "Loan Officer", "photo": null},
+    {"name": "Jordan Guggenheim", "nmls": "2278809", "role": "Loan Officer", "photo": "team-jordan-guggenheim.png"},
+    {"name": "Troy Herring", "nmls": "1945674", "role": "Loan Officer", "photo": null}
+  ],
+  "loan_programs": [
+    {"slug": "first-time-home-buyer", "name": "First-Time Home Buyer"},
+    {"slug": "fixed-rate-mortgage", "name": "Fixed-Rate Mortgage"},
+    {"slug": "va-home-loan", "name": "VA Home Loan"},
+    {"slug": "fha-home-loan", "name": "FHA Home Loan"},
+    {"slug": "usda-loan", "name": "USDA Loan"},
+    {"slug": "investment-property-loans", "name": "Investment Property Loans"},
+    {"slug": "dscr-home-loan", "name": "DSCR Home Loan"},
+    {"slug": "bank-statement-program", "name": "Bank Statement Program"},
+    {"slug": "bridge-home-loan", "name": "Bridge Home Loan"},
+    {"slug": "construction-home-loan", "name": "Construction Home Loan"},
+    {"slug": "reverse-mortgage", "name": "Reverse Mortgage"},
+    {"slug": "seller-paid-buydown", "name": "Seller-Paid Buydown"},
+    {"slug": "low-down-payment", "name": "Low Down Payment Options"},
+    {"slug": "refinance", "name": "Refinance"},
+    {"slug": "cash-out-refinance", "name": "Cash-Out Refinance"},
+    {"slug": "va-loan-refinance", "name": "VA Loan Refinance (IRRRL)"}
+  ],
+  "service_cities": [
+    {"city": "Houston", "county": "Harris", "median_home_price": "$261K"},
+    {"city": "Katy", "county": "Harris / Fort Bend / Waller", "median_home_price": "$337K"},
+    {"city": "Sugar Land", "county": "Fort Bend", "median_home_price": "$440K"},
+    {"city": "The Woodlands", "county": "Montgomery", "median_home_price": "$575K"},
+    {"city": "Conroe", "county": "Montgomery", "median_home_price": "$311K"},
+    {"city": "Fulshear", "county": "Fort Bend", "median_home_price": "$510K"},
+    {"city": "Baytown", "county": "Harris", "median_home_price": "$242K"},
+    {"city": "Bryan", "county": "Brazos", "median_home_price": "$268K"},
+    {"city": "College Station", "county": "Brazos", "median_home_price": "$325K"}
+  ],
+  "build_stage": "stage-1-pitch",
+  "layout_archetype": "Soft Modern",
+  "archetype_reasoning": "Mortgage / financial services is trust-driven, family-oriented, similar in feel to medical/wellness. Last builds: Editorial Magazine and Bold Industrial. Soft Modern fresh and on-brand."
+}

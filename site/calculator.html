@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mortgage Calculator | Guarantee Mortgage, LLC</title>
+<meta name="description" content="Calculate your monthly mortgage payment for any Texas home purchase.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body><header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="mark">GM</div>
+      <div class="wordmark">
+        <span class="top">Guarantee</span>
+        <span class="sub">Mortgage, LLC</span>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+        <li><a href="loan-options/index.html" class="has-sub">Loan Options</a></li>
+        <li><a href="rates.html" class="">Today's Rates</a></li>
+        <li><a href="calculator.html" class="" style="color:var(--gold);">Calculator</a></li>
+        <li><a href="team.html" class="">Our Team</a></li>
+        <li><a href="locations.html" class="">Locations</a></li>
+        <li><a href="reviews.html" class="">Reviews</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+        <li><a href="get-started.html" class="nav-cta">Get Pre-Approved</a></li>
+    </ul>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Mortgage Calculator</div>
+    <h1>Run the numbers. <em>Then call us</em>.</h1>
+    <p>Enter your purchase price, down payment, and rate to see your estimated monthly principal and interest payment. Then let us shop your real loan.</p>
+  </div>
+</section>
+<section style="padding:80px 0;background:var(--white);">
+  <div class="container" style="max-width:980px;">
+    <div class="reveal" style="background:var(--cream-soft);border-radius:22px;padding:48px 40px;border:1px solid var(--line);box-shadow:var(--shadow-md);">
+      <form id="mortgage-calc" onsubmit="return false;" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;">
+        <div class="form-field"><label>Purchase Price ($)</label><input type="number" name="price" value="400000" min="0" step="1000"></div>
+        <div class="form-field"><label>Down Payment ($)</label><input type="number" name="down" value="80000" min="0" step="1000"></div>
+        <div class="form-field"><label>Interest Rate (%)</label><input type="number" name="rate" value="6.125" min="0" step="0.001"></div>
+        <div class="form-field"><label>Term (years)</label>
+          <select name="term">
+            <option value="30">30 years</option>
+            <option value="20">20 years</option>
+            <option value="15">15 years</option>
+            <option value="10">10 years</option>
+          </select>
+        </div>
+        <div style="grid-column:1 / -1;text-align:center;border-top:2px solid var(--gold);padding-top:32px;margin-top:14px;">
+          <div style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Estimated Monthly P&amp;I</div>
+          <div data-output style="font-family:var(--display);font-size:64px;font-weight:500;color:var(--navy);line-height:1;">$0</div>
+          <p style="font-size:13px;color:var(--slate);margin-top:18px;max-width:540px;margin-left:auto;margin-right:auto;">Does not include taxes, insurance, HOA dues, or mortgage insurance. Your real monthly payment will be higher. Talk to a loan officer for the full picture.</p>
+        </div>
+      </form>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="get-started.html" class="btn btn-primary">Get Pre-Approved</a>
+      <a href="tel:9799773900" class="btn btn-secondary" style="margin-left:8px;">Call (979) 977-3900</a>
+    </div>
+  </div>
+</section>
+<section class="cta-strip">
+  <div class="container-narrow reveal">
+    <h2>Ready to <em>shop your loan</em>?</h2>
+    <p>One short application, 200+ lenders bidding for your business. See your real rate, your real payment, and your closing costs before you commit.</p>
+    <div class="actions">
+      <a href="get-started.html" class="btn btn-primary">Start My Pre-Approval</a>
+      <a href="tel:9799773900" class="btn btn-secondary">Call (979) 977-3900</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="mark">GM</div>
+        <div class="name">Guarantee Mortgage</div>
+        <div class="sub">LLC &middot; NMLS 279696</div>
+        <p>A family-owned Texas mortgage broker. We shop 200+ lenders on every loan so our clients close with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Loan Programs</h5>
+        <ul>
+          <li><a href="loan-options/first-time-home-buyer.html">First-Time Buyer</a></li>
+          <li><a href="loan-options/va-home-loan.html">VA Home Loan</a></li>
+          <li><a href="loan-options/fha-home-loan.html">FHA Loan</a></li>
+          <li><a href="loan-options/usda-loan.html">USDA Loan</a></li>
+          <li><a href="loan-options/refinance.html">Refinance</a></li>
+          <li><a href="loan-options/index.html">All Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="learning-center.html">Learning Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="contact-line"><strong>College Station</strong>6744 Victoria Ave<br>College Station, TX 77845<br>(979) 977-3900</div>
+        <div class="contact-line"><strong>Mont Belvieu</strong>2770 N FM 565 Rd<br>Mont Belvieu, TX 77523<br>(281) 385-5511</div>
+        <div class="contact-line"><strong>Email</strong><a href="mailto:Team@guaranteemc.com">Team@guaranteemc.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div>&copy; 2026 Guarantee Mortgage, LLC. All rights reserved. NMLS 279696. Texas Department of Savings and Mortgage Lending license.</div>
+      <div class="eho"><span class="icon">EHO</span> Equal Housing Opportunity Lender</div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
