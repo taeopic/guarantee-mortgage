@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mortgage Calculator | Guarantee Mortgage, LLC</title>
-<meta name="description" content="Calculate your monthly mortgage payment for any Texas home purchase.">
+<meta name="description" content="Estimate your monthly mortgage payment, see the breakdown, and compare scenarios.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -49,21 +49,46 @@
     </ul>
   </div>
 </header>
-<section class="page-hero">
+
+<!-- Burgundy hero strip -->
+<section class="calc-hero">
   <div class="container">
-    <div class="eyebrow">Mortgage Calculator</div>
-    <h1>Run the numbers. <em>Then call us</em>.</h1>
-    <p>Enter your purchase price, down payment, and rate to see your estimated monthly principal and interest payment. Then let us shop your real loan.</p>
+    <div class="calc-hero-eyebrow">Mortgage Tools</div>
+    <h1 class="calc-hero-title">Run the numbers <em>your way</em></h1>
+    <p class="calc-hero-sub">Estimate your monthly payment, see your amortization, and compare scenarios side by side.</p>
+    <div class="calc-hero-disclaimer">Not a loan offer. Example illustration only.</div>
   </div>
 </section>
-<section style="padding:80px 0;background:var(--white);">
-  <div class="container" style="max-width:980px;">
-    <div class="reveal" style="background:var(--cream-soft);border-radius:22px;padding:48px 40px;border:1px solid var(--line);box-shadow:var(--shadow-md);">
-      <form id="mortgage-calc" onsubmit="return false;" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;">
-        <div class="form-field"><label>Purchase Price ($)</label><input type="text" inputmode="numeric" class="currency" name="price" value="400000"></div>
-        <div class="form-field"><label>Down Payment ($)</label><input type="text" inputmode="numeric" class="currency" name="down" value="80000"></div>
-        <div class="form-field"><label>Interest Rate (%)</label><input type="number" name="rate" value="6.125" min="0" step="0.001"></div>
-        <div class="form-field"><label>Term (years)</label>
+
+<!-- Calculator two-column layout -->
+<section class="calc-section">
+  <div class="container calc-grid">
+
+    <!-- LEFT: Inputs card -->
+    <div class="calc-card calc-inputs reveal">
+      <div class="calc-card-head">
+        <div class="calc-card-eyebrow">Your Numbers</div>
+        <h2>Enter your scenario</h2>
+      </div>
+      <form id="mortgage-calc" onsubmit="return false;" class="calc-form">
+        <div class="form-field full">
+          <label>Purchase Price ($)</label>
+          <input type="text" inputmode="numeric" class="currency" name="price" value="400000">
+        </div>
+        <div class="form-field">
+          <label>Down Payment ($)</label>
+          <input type="text" inputmode="numeric" class="currency" name="down" value="80000">
+        </div>
+        <div class="form-field">
+          <label>Down %</label>
+          <input type="text" name="downpct" value="20%" readonly tabindex="-1">
+        </div>
+        <div class="form-field">
+          <label>Interest Rate (%)</label>
+          <input type="number" name="rate" value="6.125" min="0" step="0.001">
+        </div>
+        <div class="form-field">
+          <label>Term (years)</label>
           <select name="term">
             <option value="30">30 years</option>
             <option value="20">20 years</option>
@@ -71,29 +96,110 @@
             <option value="10">10 years</option>
           </select>
         </div>
-        <div style="grid-column:1 / -1;text-align:center;border-top:2px solid var(--gold);padding-top:32px;margin-top:14px;">
-          <div style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;">Estimated Monthly P&amp;I</div>
-          <div data-output style="font-family:var(--display);font-size:64px;font-weight:500;color:var(--navy);line-height:1;">$0</div>
-          <p style="font-size:13px;color:var(--slate);margin-top:18px;max-width:540px;margin-left:auto;margin-right:auto;">Does not include taxes, insurance, HOA dues, or mortgage insurance. Your real monthly payment will be higher. Talk to a loan officer for the full picture.</p>
+        <div class="form-field">
+          <label>Property Tax (yr)</label>
+          <input type="text" inputmode="numeric" class="currency" name="tax" value="7200">
+        </div>
+        <div class="form-field">
+          <label>Home Insurance (yr)</label>
+          <input type="text" inputmode="numeric" class="currency" name="ins" value="1800">
+        </div>
+        <div class="form-field">
+          <label>PMI (yr)</label>
+          <input type="text" inputmode="numeric" class="currency" name="pmi" value="0">
+        </div>
+        <div class="form-field">
+          <label>HOA Dues (mo)</label>
+          <input type="text" inputmode="numeric" class="currency" name="hoa" value="0">
+        </div>
+
+        <div class="calc-actions full">
+          <button type="button" class="btn-calc-stub" disabled title="Coming soon">Save Scenario <span class="stub-tag">Soon</span></button>
+          <button type="button" class="btn-calc-stub" disabled title="Coming soon">Email My Results <span class="stub-tag">Soon</span></button>
         </div>
       </form>
     </div>
-    <div style="text-align:center;margin-top:48px;">
-      <a href="get-started.html" class="btn btn-primary">Get Pre-Approved</a>
-      <a href="tel:9799773900" class="btn btn-secondary" style="margin-left:8px;">Call (979) 977-3900</a>
+
+    <!-- RIGHT: Results card -->
+    <aside class="calc-card calc-results reveal">
+      <div class="calc-results-head">
+        <div class="calc-results-eyebrow">Estimated Monthly Payment</div>
+        <div class="calc-results-amount" data-output>$0</div>
+        <div class="calc-results-sub">Principal &amp; Interest, before escrow</div>
+      </div>
+
+      <div class="calc-results-chart">
+        <svg viewBox="0 0 200 200" class="donut" aria-hidden="true">
+          <circle class="donut-track" cx="100" cy="100" r="76" />
+          <g data-donut-slices></g>
+          <text x="100" y="92" class="donut-center-label" text-anchor="middle">Total / mo</text>
+          <text x="100" y="118" class="donut-center-value" text-anchor="middle" data-total-monthly>$0</text>
+        </svg>
+        <ul class="donut-legend" data-donut-legend>
+          <li><span class="dot" style="background:#c8972b"></span> P&amp;I <strong data-leg-pi>$0</strong></li>
+          <li><span class="dot" style="background:#e0b54a"></span> Tax <strong data-leg-tax>$0</strong></li>
+          <li><span class="dot" style="background:#f6f1e7"></span> Insurance <strong data-leg-ins>$0</strong></li>
+          <li><span class="dot" style="background:#9a3a3a"></span> PMI <strong data-leg-pmi>$0</strong></li>
+          <li><span class="dot" style="background:#4d1414"></span> HOA <strong data-leg-hoa>$0</strong></li>
+        </ul>
+      </div>
+
+      <div class="calc-results-summary">
+        <div class="rs-row"><span>Loan Amount</span><strong data-loan>$0</strong></div>
+        <div class="rs-row"><span>Total Interest</span><strong data-total-interest>$0</strong></div>
+        <div class="rs-row"><span>Total Paid Over Term</span><strong data-total-paid>$0</strong></div>
+      </div>
+
+      <p class="calc-results-fine">Illustrative only. Actual rate, payment, taxes, insurance, and PMI depend on credit, property, and loan program. Talk to a Guarantee Mortgage loan officer for a real quote.</p>
+    </aside>
+
+  </div>
+</section>
+
+<!-- Why People Use Our Calculator -->
+<section class="calc-benefits">
+  <div class="container">
+    <div class="calc-benefits-head reveal">
+      <div class="eyebrow">Why People Use This</div>
+      <h2>Built to help you <em>plan</em>, not pitch you</h2>
+    </div>
+    <div class="calc-benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-num">01</div>
+        <h3>Confidence in your budget</h3>
+        <p>See your full monthly picture, including taxes, insurance, PMI, and HOA, so the number you plan around is the number you actually pay.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-num">02</div>
+        <h3>Compare scenarios fast</h3>
+        <p>Change the price, the down payment, the rate, the term. Watch the numbers move in real time so you can decide what fits your life.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-num">03</div>
+        <h3>Then talk real numbers</h3>
+        <p>When you are ready, our loan officers shop your loan across 200+ lenders. The calculator gives you a starting point. We get you the actual quote.</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="cta-strip">
-  <div class="container-narrow reveal">
-    <h2>Ready to <em>shop your loan</em>?</h2>
-    <p>One short application, 200+ lenders bidding for your business. See your real rate, your real payment, and your closing costs before you commit.</p>
-    <div class="actions">
-      <a href="get-started.html" class="btn btn-primary">Start My Pre-Approval</a>
-      <a href="tel:9799773900" class="btn btn-secondary">Call (979) 977-3900</a>
+
+<!-- Bottom CTA banner -->
+<section class="calc-cta-banner">
+  <div class="container">
+    <div class="calc-cta-inner reveal">
+      <div class="calc-cta-copy">
+        <div class="calc-cta-eyebrow">Next Step</div>
+        <h2>Ready to lock in <em>real numbers</em>?</h2>
+        <p>Talk to a loan officer. One short conversation tells you what you actually qualify for, what your real payment looks like, and what closing costs to expect.</p>
+      </div>
+      <div class="calc-cta-actions">
+        <a href="get-started.html" class="btn btn-primary">Get Pre-Approved</a>
+        <a href="tel:9799773900" class="btn btn-secondary">Call (979) 977-3900</a>
+      </div>
     </div>
   </div>
 </section>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
