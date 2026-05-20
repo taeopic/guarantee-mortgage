@@ -27,6 +27,37 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+  // Currency input formatting helpers
+  function formatCurrencyInput(input) {
+    const cursorStart = input.selectionStart;
+    const oldValue = input.value;
+    const digitsBefore = oldValue.substring(0, cursorStart).replace(/[^\d]/g, '').length;
+    const digits = oldValue.replace(/[^\d]/g, '');
+    const formatted = digits ? Number(digits).toLocaleString('en-US') : '';
+    input.value = formatted;
+    let newCursor = 0;
+    let digitCount = 0;
+    while (digitCount < digitsBefore && newCursor < formatted.length) {
+      if (/\d/.test(formatted[newCursor])) digitCount++;
+      newCursor++;
+    }
+    try { input.setSelectionRange(newCursor, newCursor); } catch (e) {}
+  }
+  function attachCurrencyFormatting(selector) {
+    document.querySelectorAll(selector).forEach(input => {
+      if (input.value) {
+        const digits = input.value.replace(/[^\d]/g, '');
+        if (digits) input.value = Number(digits).toLocaleString('en-US');
+      }
+      input.addEventListener('input', e => formatCurrencyInput(e.target));
+      input.addEventListener('blur', e => formatCurrencyInput(e.target));
+    });
+  }
+  function getCurrencyValue(input) {
+    return parseInt(input.value.replace(/[^\d]/g, ''), 10) || 0;
+  }
+  attachCurrencyFormatting('input.currency, input[data-format="currency"]');
+
   // Mortgage calculator
   const calc = document.getElementById('mortgage-calc');
   if (calc) {
@@ -36,8 +67,8 @@
     const term = calc.querySelector('[name=term]');
     const out = calc.querySelector('[data-output]');
     const recalc = () => {
-      const p = parseFloat(price.value) || 0;
-      const d = parseFloat(down.value) || 0;
+      const p = getCurrencyValue(price);
+      const d = getCurrencyValue(down);
       const r = (parseFloat(rate.value) || 0) / 100 / 12;
       const n = (parseInt(term.value) || 30) * 12;
       const loan = Math.max(p - d, 0);
@@ -62,8 +93,8 @@
       const btn = form.querySelector('button[type=submit]');
       btn.textContent = 'Thanks! We will reach out within 1 business day.';
       btn.disabled = true;
-      btn.style.background = '#c9a449';
-      btn.style.color = '#0f2545';
+      btn.style.background = '#c8972b';
+      btn.style.color = '#752222';
     });
   }
 })();

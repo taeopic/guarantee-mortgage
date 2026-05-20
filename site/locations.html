@@ -10,25 +10,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body><header class="site-nav">
+<body>
+<!-- Thin utility bar above main nav -->
+<div class="util-bar" aria-label="Utility links">
+  <div class="util-inner">
+    <div class="util-left">
+      <a class="util-link util-phone" href="tel:9799773900"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> College Station (979) 977-3900</a>
+      <span class="util-sep" aria-hidden="true"></span>
+      <a class="util-link util-phone" href="tel:2813855511">Mont Belvieu (281) 385-5511</a>
+    </div>
+    <div class="util-right">
+      <a class="util-link" href="learning-center.html">Learning Center</a>
+      <a class="util-link util-signin" href="contact.html"><svg width="11" height="12" viewBox="0 0 27 32" fill="currentColor" aria-hidden="true"><path d="M21.143 16q0 0.464-0.339 0.804l-9.714 9.714q-0.339 0.339-0.804 0.339t-0.804-0.339-0.339-0.804v-5.143h-8q-0.464 0-0.804-0.339t-0.339-0.804v-6.857q0-0.464 0.339-0.804t0.804-0.339h8v-5.143q0-0.464 0.339-0.804t0.804-0.339 0.804 0.339l9.714 9.714q0.339 0.339 0.339 0.804z"/></svg> Sign In</a>
+    </div>
+  </div>
+</div>
+<header class="site-nav solid">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="mark">GM</div>
-      <div class="wordmark">
-        <span class="top">Guarantee</span>
-        <span class="sub">Mortgage, LLC</span>
-      </div>
+      <img src="images/logo-shield-g.png" alt="Guarantee Mortgage shield" class="nav-shield">
+      <span class="nav-divider" aria-hidden="true"></span>
+      <span class="nav-wordmark">
+        <span class="wm-top">GUARANTEE</span>
+        <span class="wm-sub">MORTGAGE COMPANY</span>
+      </span>
     </a>
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-    <ul class="nav-links">
-        <li><a href="loan-options/index.html" class="has-sub">Loan Options</a></li>
-        <li><a href="rates.html" class="">Today's Rates</a></li>
-        <li><a href="calculator.html" class="">Calculator</a></li>
-        <li><a href="team.html" class="">Our Team</a></li>
-        <li><a href="locations.html" class="" style="color:var(--gold);">Locations</a></li>
-        <li><a href="reviews.html" class="">Reviews</a></li>
-        <li><a href="contact.html" class="">Contact</a></li>
-        <li><a href="get-started.html" class="nav-cta">Get Pre-Approved</a></li>
+    <ul class="nav-links hero-nav-links">
+        <li><a href="loan-options/index.html">Home Loans</a></li>
+        <li><a href="loan-options/first-time-home-buyer.html">Purchase</a></li>
+        <li><a href="loan-options/refinance.html">Refinance</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="rates.html">Rates</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="get-started.html" class="nav-cta">Apply Now</a></li>
     </ul>
   </div>
 </header>
@@ -88,12 +105,7 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="mark">GM</div>
-        <div class="name">Guarantee Mortgage</div>
-        <div class="sub">LLC &middot; NMLS 279696</div>
-        <p>A family-owned Texas mortgage broker. We shop 200+ lenders on every loan so our clients close with confidence.</p>
-      </div>
+      <div class="footer-brand"><img src="images/logo-primary.jpg" alt="Guarantee Mortgage, LLC" class="brand-logo brand-logo-footer"><div class="sub">LLC &middot; NMLS 279696</div><p>A family-owned Texas mortgage broker. We shop 200+ lenders on every loan so our clients close with confidence.</p></div>
       <div class="footer-col">
         <h5>Loan Programs</h5>
         <ul>
