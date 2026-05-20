@@ -14,6 +14,21 @@
 <!-- Maroon hero wrapper holds nav + hero + values strip + cream tagline bar -->
 <div class="hero-wrap">
 
+  <!-- Thin utility bar above main nav (mirrors guaranteemc.com's Sign In + Apply Now rhythm) -->
+  <div class="util-bar" aria-label="Utility links">
+    <div class="util-inner">
+      <div class="util-left">
+        <a class="util-link util-phone" href="tel:9799773900"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> College Station (979) 977-3900</a>
+        <span class="util-sep" aria-hidden="true"></span>
+        <a class="util-link util-phone" href="tel:2813855511">Mont Belvieu (281) 385-5511</a>
+      </div>
+      <div class="util-right">
+        <a class="util-link" href="learning-center.html">Learning Center</a>
+        <a class="util-link util-signin" href="contact.html"><svg width="11" height="12" viewBox="0 0 27 32" fill="currentColor" aria-hidden="true"><path d="M21.143 16q0 0.464-0.339 0.804l-9.714 9.714q-0.339 0.339-0.804 0.339t-0.804-0.339-0.339-0.804v-5.143h-8q-0.464 0-0.804-0.339t-0.339-0.804v-6.857q0-0.464 0.339-0.804t0.804-0.339h8v-5.143q0-0.464 0.339-0.804t0.804-0.339 0.804 0.339l9.714 9.714q0.339 0.339 0.339 0.804z"/></svg> Sign In</a>
+      </div>
+    </div>
+  </div>
+
   <header class="site-nav hero-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -26,12 +41,16 @@
       </a>
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links hero-nav-links">
-        <li><a href="loan-options/index.html">Home Loans</a></li>
-        <li><a href="loan-options/index.html">Purchase</a></li>
+        <li><a href="loan-options/index.html">Buy</a></li>
         <li><a href="loan-options/refinance.html">Refinance</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="rates.html">Today's Rates</a></li>
+        <li><a href="loan-options/index.html">Loan Options</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <a href="get-started.html" class="nav-cta">Apply Now</a>
     </div>
   </header>
 
@@ -60,6 +79,7 @@
     <!-- Right column: full-bleed drone video with maroon edge fade -->
     <div class="hero-right">
       <video class="hero-drone-video" autoplay muted loop playsinline preload="metadata" poster="images/drone-start-frame.png" aria-label="Aerial drone footage of Aggieland, College Station Texas">
+        <source src="videos/hero-mobile.webm" type="video/webm" media="(max-width: 768px)">
         <source src="videos/hero-drone.mp4" type="video/mp4">
         <img src="images/drone-start-frame.png" alt="Aerial view of Aggieland with the Welcome to Aggieland water tower over College Station">
       </video>
@@ -103,6 +123,27 @@
   </section>
 
 </div>
+
+<!-- Elevated callout card (mirrors the Bilt Rewards overlap card on guaranteemc.com) -->
+<section class="trust-callout" aria-label="Why Guarantee Mortgage">
+  <div class="trust-callout-inner">
+    <div class="trust-badge" aria-hidden="true">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.9 6 6.6 1-4.8 4.7 1.1 6.6L12 17l-5.8 3.3 1.1-6.6L2.5 9l6.6-1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="trust-body">
+      <span class="trust-eyebrow">200+ Lender Network</span>
+      <div class="trust-headline">We Shop Lenders. <span>You Win the Rate.</span></div>
+      <p class="trust-sub">Our brokers compare 200+ lenders on every file. You see real rates, real fees, and real closing costs before you commit. No mark-ups, no games, no surprises.</p>
+      <div class="trust-pills">
+        <span class="trust-pill"><strong>18-25 day</strong> avg close</span>
+        <span class="trust-pill"><strong>200+</strong> lenders</span>
+        <span class="trust-pill"><strong>20+ years</strong> in Texas</span>
+        <span class="trust-pill"><strong>$558M+</strong> funded since 2021</span>
+      </div>
+    </div>
+    <a href="get-started.html" class="trust-cta">See My Rate &rarr;</a>
+  </div>
+</section>
 
 <section class="programs">
   <div class="container">
