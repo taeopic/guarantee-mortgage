@@ -11,77 +11,98 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="images/logo-primary.jpg" alt="Guarantee Mortgage, LLC" class="brand-logo">
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="loan-options/index.html" class="has-sub">Loan Options</a></li>
-      <li><a href="rates.html">Today's Rates</a></li>
-      <li><a href="calculator.html">Calculator</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="locations.html">Locations</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="get-started.html" class="nav-cta">Get Pre-Approved</a></li>
-    </ul>
-  </div>
-</header>
+<!-- Maroon hero wrapper holds nav + hero + values strip + cream tagline bar -->
+<div class="hero-wrap">
 
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-eyebrow"><span class="dot"></span> Texas Mortgage Broker &middot; NMLS 279696</div>
-      <h1>We Shop Lenders. <em>You Win</em> the Rate.</h1>
-      <p class="hero-lead">A family-owned Texas mortgage broker comparing 200+ lenders on every loan, so you walk into closing with the lowest rate, the right program, and a team that picks up the phone.</p>
-      <div class="hero-actions">
-        <a href="get-started.html" class="btn btn-primary">Get Pre-Approved in 24 Hours</a>
-        <a href="tel:9799773900" class="btn btn-secondary">Call (979) 977-3900</a>
-      </div>
-      <div class="hero-trust">
-        <div class="stat"><div class="num">200+</div><div class="label">Lender Network</div></div>
-        <div class="stat"><div class="num">15</div><div class="label">Years Serving Texas</div></div>
-        <div class="stat"><div class="num">5.0&#9733;</div><div class="label">Avg Client Rating</div></div>
-      </div>
+  <header class="site-nav hero-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-shield-g.png" alt="Guarantee Mortgage shield" class="nav-shield">
+        <span class="nav-divider" aria-hidden="true"></span>
+        <span class="nav-wordmark">
+          <span class="wm-top">GUARANTEE</span>
+          <span class="wm-sub">MORTGAGE COMPANY</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links hero-nav-links">
+        <li><a href="loan-options/index.html">Home Loans</a></li>
+        <li><a href="loan-options/index.html">Purchase</a></li>
+        <li><a href="loan-options/refinance.html">Refinance</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="hero-visual">
-      <img src="images/hero-neighborhood.png" alt="Texas suburban neighborhood at golden hour">
-      <div class="hero-shimmer"></div>
-      <div class="hero-badge">
-        <div class="icon">A+</div>
-        <div class="text">
-          <div class="l1">BBB Accredited</div>
-          <div class="l2">Texas-Owned &amp; Operated</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section class="value-strip">
-  <div class="container">
-    <div class="value-strip-grid">
-      <div class="value-item">
-        <div class="ico">&#9728;</div>
-        <div class="text"><strong>Wholesale Rates</strong>Brokers price lower than the bank down the street.</div>
-      </div>
-      <div class="value-item">
-        <div class="ico">&#9888;</div>
-        <div class="text"><strong>Local Texas Underwriting</strong>Two offices, real people, real fast turn times.</div>
-      </div>
-      <div class="value-item">
-        <div class="ico">&#9733;</div>
-        <div class="text"><strong>Every Program</strong>FHA, VA, USDA, DSCR, Bank Statement, Construction.</div>
-      </div>
-      <div class="value-item">
-        <div class="ico">&#10003;</div>
-        <div class="text"><strong>24-Hour Pre-Approval</strong>Get a credible offer letter the next business day.</div>
+  <section class="hero hero-split">
+    <!-- Left maroon column: headline + CTAs -->
+    <div class="hero-left">
+      <h1 class="hero-headline">
+        <span class="hh-line">Guiding You</span>
+        <span class="hh-line">Home in</span>
+        <span class="hh-line hh-accent">Aggieland.</span>
+      </h1>
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-sub">Local expertise. Personalized service.<br>Mortgages you can count on.</p>
+      <div class="hero-ctas">
+        <a href="get-started.html" class="hero-btn hero-btn-primary">
+          <span>Get Pre-Qualified</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="contact.html" class="hero-btn hero-btn-secondary">
+          <span>Schedule a Consultation</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Right column: full-bleed drone video with maroon edge fade -->
+    <div class="hero-right">
+      <video class="hero-drone-video" autoplay muted loop playsinline preload="metadata" poster="images/drone-start-frame.png" aria-label="Aerial drone footage of Aggieland, College Station Texas">
+        <source src="videos/hero-drone.mp4" type="video/mp4">
+        <img src="images/drone-start-frame.png" alt="Aerial view of Aggieland with the Welcome to Aggieland water tower over College Station">
+      </video>
+      <div class="hero-edge-fade" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Four-column maroon values strip directly under the hero -->
+  <section class="hero-values" aria-label="Why choose Guarantee Mortgage">
+    <div class="hv-col">
+      <svg class="hv-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <div class="hv-text"><strong>Local Experts</strong><span>Proudly serving College Station, TX</span></div>
+    </div>
+    <div class="hv-col">
+      <svg class="hv-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12l3-2 3 1 4-4 3 2 5-1v8l-5 2-4-2-4 2-5-2v-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 11l3-3 3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div class="hv-text"><strong>Personalized Solutions</strong><span>Tailored loan options for your unique goals</span></div>
+    </div>
+    <div class="hv-col">
+      <svg class="hv-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 12.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="hv-text"><strong>Honest &amp; Transparent</strong><span>Clear communication every step of the way</span></div>
+    </div>
+    <div class="hv-col">
+      <svg class="hv-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3 9.5l6.1-.9L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <div class="hv-text"><strong>Aggie Values</strong><span>Built on trust, integrity, and community</span></div>
+    </div>
+  </section>
+
+  <!-- Cream tagline bar pinned at the very bottom of the hero block -->
+  <section class="hero-tagbar" aria-label="Local promise">
+    <div class="ht-left">
+      <span>Hometown Values.</span>
+      <span class="ht-dash" aria-hidden="true"></span>
+      <span>Local Knowledge.</span>
+      <span class="ht-dash" aria-hidden="true"></span>
+      <span>Loans You Can Count On.</span>
+    </div>
+    <div class="ht-right">
+      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" aria-hidden="true"><path d="M1 4h6V1h5v3h9v6l-2 2v6h-7l-2-3-3 2-2-2H1V4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      <span>College Station, Texas</span>
+    </div>
+  </section>
+
+</div>
 
 <section class="programs">
   <div class="container">
