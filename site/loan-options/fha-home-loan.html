@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/interior-loan.css">
 </head>
 <body>
 <!-- Thin utility bar above main nav -->
@@ -49,62 +50,126 @@
     </ul>
   </div>
 </header>
-<section class="page-hero">
-  <div style="position:absolute;inset:0;opacity:0.08;background:url(../images/first-time-buyers.png) center/cover;"></div>
+
+<!-- HERO -->
+<section class="loan-hero">
   <div class="container">
-    <div class="eyebrow">FHA Home Loan</div>
-    <h1>Lower down. <em>Flexible credit</em>.</h1>
-    <p>A government-backed program built for buyers with tight savings or credit blemishes. FHA gets more Texans into homes than almost any other product.</p>
-  </div>
-</section>
-<section style="padding:90px 0;background:var(--white);">
-  <div class="container" style="display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start;">
-    <div class="prose reveal">
-      <span class="section-eyebrow">Program Highlights</span>
-      <h2 style="font-family:var(--display);font-weight:400;font-size:38px;margin:14px 0 22px;">What sets this loan apart.</h2>
-      <ul>
-      <li>3.5% minimum down payment</li>
-      <li>Credit scores from 580 (some down to 500 with 10% down)</li>
-      <li>Gift funds from family acceptable for entire down payment</li>
-      <li>Streamline refinance available with no appraisal</li>
-      </ul>
-      <h3>Who is this loan for?</h3>
-      <p>If any of these benefits speak to your situation, a Guarantee Mortgage loan officer can run a no-cost scenario in under 24 hours showing your exact rate, payment, and closing costs. We are licensed in Texas and serve every county in the state from our College Station and Mont Belvieu offices.</p>
-      <h3>What documents will I need?</h3>
-      <p>For a pre-approval, we typically need two recent pay stubs, two years of W-2s (or tax returns if self-employed), two months of bank statements, and a copy of your driver license. Self-employed and investor borrowers may need a few additional documents which your loan officer will spell out clearly upfront.</p>
-    </div>
-    <div class="reveal">
-      <div class="lead-form">
-        <h3>Check FHA eligibility</h3>
-        <p class="sub">10-minute application. Soft credit pull only.</p>
-        <form>
-          <div class="form-row">
-            <div class="form-field"><label>First Name</label><input required type="text"></div>
-            <div class="form-field"><label>Last Name</label><input required type="text"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-field"><label>Email</label><input required type="email"></div>
-            <div class="form-field"><label>Phone</label><input required type="tel"></div>
-          </div>
-          <div class="form-single form-field"><label>Property City</label><input type="text" placeholder="e.g., Bryan"></div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send My Inquiry</button>
-          </div>
-        </form>
+    <div class="loan-hero-inner">
+      <div class="loan-hero-text">
+        <div class="eyebrow">Loan Programs / FHA Home Loan</div>
+        <h1>Lower down. <em>Flexible credit</em>. More Texans home.</h1>
+        <p class="lead">The FHA program is the workhorse of American homeownership. Government-backed, forgiving on credit, and friendly to gift funds, it puts more first-time and credit-rebuilding buyers under their own roof than any other loan.</p>
+        <div class="loan-hero-ctas">
+          <a href="../get-started.html" class="btn-gold">Get Pre-Qualified</a>
+          <a href="../team.html" class="btn-outline">Talk to a Loan Officer</a>
+        </div>
+      </div>
+      <div class="loan-hero-image">
+        <img src="../images/loans/interior-fha.jpg" alt="Young Texas family moving into FHA-financed home" loading="eager">
       </div>
     </div>
   </div>
 </section>
-<section class="cta-strip">
-  <div class="container-narrow reveal">
-    <h2>Ready to <em>shop your loan</em>?</h2>
-    <p>One short application, 200+ lenders bidding for your business. See your real rate, your real payment, and your closing costs before you commit.</p>
-    <div class="actions">
-      <a href="../get-started.html" class="btn btn-primary">Start My Pre-Approval</a>
-      <a href="tel:9799773900" class="btn btn-secondary">Call (979) 977-3900</a>
+
+<!-- AT A GLANCE -->
+<section class="loan-stats">
+  <div class="container">
+    <div class="loan-stats-grid">
+      <div class="loan-stat"><div class="loan-stat-value">3.5%</div><div class="loan-stat-label">Down Payment Min</div></div>
+      <div class="loan-stat"><div class="loan-stat-value">580+</div><div class="loan-stat-label">Credit Score Min</div></div>
+      <div class="loan-stat"><div class="loan-stat-value">$524K+</div><div class="loan-stat-label">Tx County Loan Limit</div></div>
+      <div class="loan-stat"><div class="loan-stat-value">28 to 35d</div><div class="loan-stat-label">Avg Close Time</div></div>
     </div>
   </div>
 </section>
+
+<!-- BENEFITS -->
+<section class="loan-section">
+  <div class="container">
+    <div class="loan-section-head">
+      <span class="eyebrow">Why this loan</span>
+      <h2>What makes the <em>FHA Loan</em> different.</h2>
+      <p class="sub">FHA is forgiving where other programs are strict. Lower scores, smaller down payment, gift funds welcome, even with some past credit hiccups.</p>
+    </div>
+    <div class="benefits-grid">
+        <div class="benefit-item"><div class="benefit-check">1</div><div class="benefit-text"><strong>3.5% down with 580+ FICO</strong><span>If your credit score is at least 580, your minimum down payment is just 3.5% of the purchase price.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">2</div><div class="benefit-text"><strong>500 to 579 FICO with 10% down</strong><span>Even buyers with lower scores can qualify if they can put 10% down. Few other programs offer this flexibility.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">3</div><div class="benefit-text"><strong>100% gift-funded down payment</strong><span>Your entire down payment can come from family, employer, or approved non-profit. No seasoning required on gift funds.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">4</div><div class="benefit-text"><strong>Forgiving on past credit issues</strong><span>Most lenders allow FHA approval 2 years after a Chapter 7 bankruptcy and 3 years after a foreclosure or short sale.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">5</div><div class="benefit-text"><strong>FHA Streamline refinance</strong><span>Existing FHA borrowers can lower their rate without an appraisal, income re-verification, or new credit check in many cases.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">6</div><div class="benefit-text"><strong>Seller can pay up to 6% in concessions</strong><span>Sellers can contribute toward closing costs, rate buydowns, and prepaids, often eliminating a buyer's out-of-pocket at the table.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">7</div><div class="benefit-text"><strong>203(k) renovation option</strong><span>Roll the cost of repairs and upgrades into the same FHA loan. One closing, one rate, finished home.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">8</div><div class="benefit-text"><strong>Assumable to future buyers</strong><span>A future buyer can take over your FHA loan at your original rate, a major asset when you sell into a higher-rate market.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEAL BORROWER -->
+<section class="loan-section alt">
+  <div class="container">
+    <div class="ideal-borrower">
+      <h3>Is this loan right for you?</h3>
+      <p class="intro">FHA is built for real borrowers with real life circumstances. Here is who tends to win with the program.</p>
+      <ul class="ideal-list">
+          <li>Your credit score is between 580 and 700 and conventional programs are pricing you uncompetitively</li>
+          <li>You have less than 5% saved for a down payment and want to keep cash reserves intact</li>
+          <li>You are a first-time buyer, or have not owned a home in the last three years</li>
+          <li>Your debt-to-income ratio is in the 40 to 50 percent range</li>
+          <li>You have a past bankruptcy, foreclosure, or short sale that is now 2 to 3 years behind you</li>
+          <li>You are receiving down payment help from family, a state program, or your employer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="loan-section">
+  <div class="container">
+    <div class="loan-section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps to <em>closing day</em>.</h2>
+      <p class="sub">Every Guarantee Mortgage loan officer walks you through each step in plain English. No surprises, no jargon, no hidden fees.</p>
+    </div>
+    <div class="process-steps">
+        <div class="process-step"><span class="process-step-num">01</span><h4>Apply</h4><p>Submit our 10-minute online application. Soft credit pull, no impact on your score.</p></div>
+        <div class="process-step"><span class="process-step-num">02</span><h4>Get Pre-Qualified</h4><p>Loan officer reviews documents and issues your FHA pre-qualification letter, usually within 24 hours.</p></div>
+        <div class="process-step"><span class="process-step-num">03</span><h4>Find Your Home</h4><p>Shop the FHA-approved inventory with confidence. We help your agent understand FHA appraisal requirements.</p></div>
+        <div class="process-step"><span class="process-step-num">04</span><h4>Close</h4><p>Our team coordinates appraisal, underwriting, and closing. Most FHA loans close in 28 to 35 days.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="loan-section alt">
+  <div class="container">
+    <div class="loan-section-head">
+      <span class="eyebrow">Common Questions</span>
+      <h2>What borrowers ask <em>most</em>.</h2>
+    </div>
+    <div class="faq-block">
+        <div class="faq-item"><div class="faq-q">Do I have to be a first-time buyer to use an FHA loan?</div><div class="faq-a">No. While many first-time buyers choose FHA, the program is open to repeat buyers too. The only restriction is that the home must be your primary residence.</div></div>
+        <div class="faq-item"><div class="faq-q">What is FHA mortgage insurance?</div><div class="faq-a">FHA loans carry an upfront mortgage insurance premium (1.75% of the loan, financeable) and an annual premium paid monthly. The annual premium typically stays for the life of the loan unless you put 10% or more down.</div></div>
+        <div class="faq-item"><div class="faq-q">Can I use an FHA loan on a fixer-upper?</div><div class="faq-a">Yes, through the FHA 203(k) renovation loan. We can roll the cost of repairs and upgrades into a single mortgage, with one rate and one closing.</div></div>
+        <div class="faq-item"><div class="faq-q">What are the FHA loan limits in Texas?</div><div class="faq-a">Most Texas counties cap FHA loans at $524,225 for single-family homes. Higher cost counties go up to $776,250. We confirm your county's exact limit on the call.</div></div>
+        <div class="faq-item"><div class="faq-q">Can I get an FHA loan after a bankruptcy?</div><div class="faq-a">Yes. Most lenders require 2 years from a Chapter 7 discharge and 12 months of on-time payments after a Chapter 13. Foreclosures and short sales typically require a 3-year wait.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="loan-final-cta">
+  <div class="container">
+    <div class="loan-final-cta-inner">
+      <h2>Ready to start your <em>FHA Loan</em> journey?</h2>
+      <p>One short application, 200+ lenders bidding for your business. See your real rate, your real payment, and your closing costs before you commit.</p>
+      <div class="actions">
+        <a href="../get-started.html" class="btn-gold">Start My Pre-Approval</a>
+        <a href="tel:9799773900" class="btn-outline">Call (979) 977-3900</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">

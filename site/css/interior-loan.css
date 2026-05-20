@@ -1,0 +1,437 @@
+/* ============================================================
+   Interior Loan-Option Page Stylesheet
+   Layered on top of styles.css. Uses brand vars from :root.
+   ============================================================ */
+
+/* ===== Loan Hero ===== */
+.loan-hero {
+  background: linear-gradient(135deg, #752222 0%, #4d1414 100%);
+  color: #fff;
+  padding: 96px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+.loan-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 30%, rgba(200, 151, 43, 0.18), transparent 55%);
+  pointer-events: none;
+}
+.loan-hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 72px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.loan-hero-text .eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.loan-hero-text h1 {
+  font-family: var(--display);
+  font-size: clamp(40px, 5.2vw, 64px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+}
+.loan-hero-text h1 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+.loan-hero-text p.lead {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+.loan-hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.loan-hero-ctas .btn-gold {
+  background: var(--gold);
+  color: var(--navy-deep);
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  border: 2px solid var(--gold);
+  transition: all .25s ease;
+  display: inline-block;
+}
+.loan-hero-ctas .btn-gold:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  transform: translateY(-2px);
+  color: var(--navy-deep);
+}
+.loan-hero-ctas .btn-outline {
+  background: transparent;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  border: 2px solid rgba(255,255,255,0.45);
+  transition: all .25s ease;
+  display: inline-block;
+}
+.loan-hero-ctas .btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  color: #fff;
+}
+.loan-hero-image {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.04);
+}
+.loan-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.loan-hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(77,20,20,0.35));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ===== At-a-glance stats strip ===== */
+.loan-stats {
+  background: var(--cream);
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+.loan-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.loan-stat {
+  text-align: center;
+  padding: 12px 24px;
+  position: relative;
+}
+.loan-stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0; top: 16px; bottom: 16px;
+  width: 1px;
+  background: var(--line);
+}
+.loan-stat-value {
+  font-family: var(--display);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.loan-stat-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* ===== Section structure ===== */
+.loan-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+.loan-section.alt {
+  background: var(--cream-soft);
+}
+.loan-section-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.loan-section-head .eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: block;
+}
+.loan-section-head h2 {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  color: var(--navy);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+.loan-section-head h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.loan-section-head p.sub {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--slate);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* ===== Benefits grid (6 to 8 items) ===== */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 48px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.benefit-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+.benefit-check {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 2px;
+}
+.benefit-text {
+  flex: 1;
+}
+.benefit-text strong {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+.benefit-text span {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+/* ===== Ideal-borrower checklist ===== */
+.ideal-borrower {
+  background: var(--cream-soft);
+  border-left: 3px solid var(--gold);
+  padding: 40px 48px;
+  border-radius: 4px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.ideal-borrower h3 {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.ideal-borrower p.intro {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--slate);
+  margin-bottom: 22px;
+  font-style: italic;
+}
+.ideal-list {
+  list-style: none;
+  padding: 0;
+}
+.ideal-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(117, 34, 34, 0.12);
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.ideal-list li:last-child { border-bottom: none; }
+.ideal-list li::before {
+  content: "✓";
+  flex-shrink: 0;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 1px;
+}
+
+/* ===== Process steps ===== */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+.process-step {
+  text-align: left;
+  position: relative;
+  padding: 0 8px;
+}
+.process-step-num {
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
+  display: block;
+}
+.process-step h4 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.process-step p {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.65;
+}
+
+/* ===== FAQ accordion ===== */
+.faq-block {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+}
+.faq-item:first-child { border-top: 1px solid var(--line); }
+.faq-q {
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.faq-a {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--slate);
+}
+
+/* ===== Final CTA banner ===== */
+.loan-final-cta {
+  background: linear-gradient(135deg, #752222 0%, #4d1414 100%);
+  color: #fff;
+  padding: 88px 0;
+  position: relative;
+  overflow: hidden;
+}
+.loan-final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(200, 151, 43, 0.18), transparent 50%);
+  pointer-events: none;
+}
+.loan-final-cta-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.loan-final-cta h2 {
+  font-family: var(--display);
+  font-size: clamp(32px, 4.2vw, 50px);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.loan-final-cta h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+.loan-final-cta p {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loan-final-cta .actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .loan-hero { padding: 64px 0 72px; }
+  .loan-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .loan-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
+  .loan-stat:nth-child(2)::after { display: none; }
+  .loan-stat:nth-child(odd)::after { display: none; }
+  .benefits-grid { grid-template-columns: 1fr; gap: 18px; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
+  .loan-section { padding: 64px 0; }
+  .ideal-borrower { padding: 28px 24px; }
+}
+
+@media (max-width: 560px) {
+  .process-steps { grid-template-columns: 1fr; }
+  .loan-hero-text h1 { font-size: 36px; }
+  .loan-stats-grid { grid-template-columns: 1fr; }
+  .loan-stat::after { display: none !important; }
+  .loan-stat { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .loan-stat:last-child { border-bottom: none; }
+}

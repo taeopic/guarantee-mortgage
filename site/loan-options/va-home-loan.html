@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/interior-loan.css">
 </head>
 <body>
 <!-- Thin utility bar above main nav -->
@@ -49,62 +50,125 @@
     </ul>
   </div>
 </header>
-<section class="page-hero">
-  <div style="position:absolute;inset:0;opacity:0.08;background:url(../images/va-family.png) center/cover;"></div>
+
+<!-- HERO -->
+<section class="loan-hero">
   <div class="container">
-    <div class="eyebrow">VA Home Loan</div>
-    <h1>Service earned. <em>Zero down</em>. No PMI.</h1>
-    <p>Active duty, veterans, and qualifying spouses. We have processed hundreds of VA loans across Texas including in the Aggieland and Houston military communities.</p>
-  </div>
-</section>
-<section style="padding:90px 0;background:var(--white);">
-  <div class="container" style="display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start;">
-    <div class="prose reveal">
-      <span class="section-eyebrow">Program Highlights</span>
-      <h2 style="font-family:var(--display);font-weight:400;font-size:38px;margin:14px 0 22px;">What sets this loan apart.</h2>
-      <ul>
-      <li>0% down on primary residences up to county loan limits</li>
-      <li>No private mortgage insurance, ever</li>
-      <li>Funding fee can be financed into the loan</li>
-      <li>Streamline IRRRL available for existing VA borrowers</li>
-      </ul>
-      <h3>Who is this loan for?</h3>
-      <p>If any of these benefits speak to your situation, a Guarantee Mortgage loan officer can run a no-cost scenario in under 24 hours showing your exact rate, payment, and closing costs. We are licensed in Texas and serve every county in the state from our College Station and Mont Belvieu offices.</p>
-      <h3>What documents will I need?</h3>
-      <p>For a pre-approval, we typically need two recent pay stubs, two years of W-2s (or tax returns if self-employed), two months of bank statements, and a copy of your driver license. Self-employed and investor borrowers may need a few additional documents which your loan officer will spell out clearly upfront.</p>
-    </div>
-    <div class="reveal">
-      <div class="lead-form">
-        <h3>Start my VA loan</h3>
-        <p class="sub">10-minute application. Soft credit pull only.</p>
-        <form>
-          <div class="form-row">
-            <div class="form-field"><label>First Name</label><input required type="text"></div>
-            <div class="form-field"><label>Last Name</label><input required type="text"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-field"><label>Email</label><input required type="email"></div>
-            <div class="form-field"><label>Phone</label><input required type="tel"></div>
-          </div>
-          <div class="form-single form-field"><label>Property City</label><input type="text" placeholder="e.g., Bryan"></div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send My Inquiry</button>
-          </div>
-        </form>
+    <div class="loan-hero-inner">
+      <div class="loan-hero-text">
+        <div class="eyebrow">Loan Programs / VA Home Loan</div>
+        <h1>Service earned. <em>Zero down</em>. No PMI.</h1>
+        <p class="lead">Built for active-duty service members, veterans, and qualifying spouses. The VA loan is one of the most powerful mortgage benefits in the country and we have closed hundreds of them.</p>
+        <div class="loan-hero-ctas">
+          <a href="../get-started.html" class="btn-gold">Get Pre-Qualified</a>
+          <a href="../team.html" class="btn-outline">Talk to a Loan Officer</a>
+        </div>
+      </div>
+      <div class="loan-hero-image">
+        <img src="../images/loans/interior-va.jpg" alt="Texas veteran on porch of craftsman home with American flag" loading="eager">
       </div>
     </div>
   </div>
 </section>
-<section class="cta-strip">
-  <div class="container-narrow reveal">
-    <h2>Ready to <em>shop your loan</em>?</h2>
-    <p>One short application, 200+ lenders bidding for your business. See your real rate, your real payment, and your closing costs before you commit.</p>
-    <div class="actions">
-      <a href="../get-started.html" class="btn btn-primary">Start My Pre-Approval</a>
-      <a href="tel:9799773900" class="btn btn-secondary">Call (979) 977-3900</a>
+
+<!-- AT A GLANCE -->
+<section class="loan-stats">
+  <div class="container">
+    <div class="loan-stats-grid">
+      <div class="loan-stat"><div class="loan-stat-value">0%</div><div class="loan-stat-label">Down Payment Min</div></div>
+      <div class="loan-stat"><div class="loan-stat-value">580+</div><div class="loan-stat-label">Typical Credit Score</div></div>
+      <div class="loan-stat"><div class="loan-stat-value">$806K+</div><div class="loan-stat-label">Tx County Loan Limit</div></div>
+      <div class="loan-stat"><div class="loan-stat-value">21 to 28d</div><div class="loan-stat-label">Avg Close Time</div></div>
     </div>
   </div>
 </section>
+
+<!-- BENEFITS -->
+<section class="loan-section">
+  <div class="container">
+    <div class="loan-section-head">
+      <span class="eyebrow">Why this loan</span>
+      <h2>What makes the <em>VA Loan</em> different.</h2>
+      <p class="sub">VA loans waive private mortgage insurance, allow seller-paid closing costs up to 4%, and let you reuse the benefit your whole life.</p>
+    </div>
+    <div class="benefits-grid">
+        <div class="benefit-item"><div class="benefit-check">1</div><div class="benefit-text"><strong>Zero down payment</strong><span>Finance up to 100% of the purchase price on a primary residence within county loan limits.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">2</div><div class="benefit-text"><strong>No private mortgage insurance</strong><span>VA does not require PMI ever, saving most borrowers $150 to $400 per month versus comparable conventional loans.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">3</div><div class="benefit-text"><strong>Competitive interest rates</strong><span>VA rates typically run a quarter to a half point below conventional thanks to the government guarantee.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">4</div><div class="benefit-text"><strong>Funding fee can be financed</strong><span>Roll the one-time VA funding fee into the loan balance. Borrowers with 10%+ service-connected disability are exempt.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">5</div><div class="benefit-text"><strong>Streamline refinance (IRRRL)</strong><span>Lower your rate on an existing VA loan with reduced documentation and no appraisal required.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">6</div><div class="benefit-text"><strong>Reusable benefit</strong><span>Restore your VA entitlement and use the program again on your next home as long as the prior loan is paid off.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">7</div><div class="benefit-text"><strong>Seller concessions allowed</strong><span>Sellers can contribute up to 4% toward closing costs, prepaids, and even pay off your judgments or debts.</span></div></div>
+        <div class="benefit-item"><div class="benefit-check">8</div><div class="benefit-text"><strong>Assumable loan</strong><span>A future buyer with VA eligibility can take over your low rate, a real selling advantage when rates rise.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEAL BORROWER -->
+<section class="loan-section alt">
+  <div class="container">
+    <div class="ideal-borrower">
+      <h3>Is this loan right for you?</h3>
+      <p class="intro">Use this honest checklist before applying. If most of these describe you, the VA program will likely be your best path.</p>
+      <ul class="ideal-list">
+          <li>You served on active duty 90+ continuous days during wartime or 181+ days during peacetime</li>
+          <li>You served 6+ years in the National Guard or Reserves, or qualify as a surviving spouse</li>
+          <li>You plan to occupy the home as your primary residence within 60 days of closing</li>
+          <li>Your credit score is 580 or higher and your debt-to-income ratio is under 41%</li>
+          <li>You have a valid Certificate of Eligibility or are willing to let us pull one for you at no cost</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="loan-section">
+  <div class="container">
+    <div class="loan-section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps to <em>closing day</em>.</h2>
+      <p class="sub">Every Guarantee Mortgage loan officer walks you through each step in plain English. No surprises, no jargon, no hidden fees.</p>
+    </div>
+    <div class="process-steps">
+        <div class="process-step"><span class="process-step-num">01</span><h4>Confirm Eligibility</h4><p>We pull your Certificate of Eligibility from the VA and confirm your entitlement amount the same day.</p></div>
+        <div class="process-step"><span class="process-step-num">02</span><h4>Get Pre-Qualified</h4><p>A 10-minute application and soft credit pull tells us your max loan amount and locks in a rate range.</p></div>
+        <div class="process-step"><span class="process-step-num">03</span><h4>Find Your Home</h4><p>Shop with confidence. Your pre-qualification letter makes offers stronger and closings faster.</p></div>
+        <div class="process-step"><span class="process-step-num">04</span><h4>Close in 21 to 28 Days</h4><p>Our average VA close in Texas is under 4 weeks. You move in, we wire the funds, done.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="loan-section alt">
+  <div class="container">
+    <div class="loan-section-head">
+      <span class="eyebrow">Common Questions</span>
+      <h2>What borrowers ask <em>most</em>.</h2>
+    </div>
+    <div class="faq-block">
+        <div class="faq-item"><div class="faq-q">Do I have to be a first-time buyer to use the VA loan?</div><div class="faq-a">No. You can use VA benefits multiple times throughout your life. As long as you have remaining entitlement or restore it by paying off the prior loan, the program is available again.</div></div>
+        <div class="faq-item"><div class="faq-q">Is there really no down payment required?</div><div class="faq-a">Correct. On VA purchase loans up to county loan limits, you can put 0% down. Above the county limit you contribute 25% of the amount over the limit.</div></div>
+        <div class="faq-item"><div class="faq-q">What is the VA funding fee?</div><div class="faq-a">A one-time fee that helps fund the program. It ranges from 1.25% to 3.3% depending on service category, down payment, and whether it is your first use. It can be financed into the loan.</div></div>
+        <div class="faq-item"><div class="faq-q">Can my spouse use my VA benefit?</div><div class="faq-a">A surviving spouse of a service member who died in the line of duty or from a service-connected disability may qualify. Married couples can also use a Joint VA Loan.</div></div>
+        <div class="faq-item"><div class="faq-q">Can I use a VA loan for an investment property?</div><div class="faq-a">No. The home must be your primary residence and you must occupy it within 60 days. You can later move out and keep the property as a rental once you have lived in it.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="loan-final-cta">
+  <div class="container">
+    <div class="loan-final-cta-inner">
+      <h2>Ready to start your <em>VA Loan</em> journey?</h2>
+      <p>One short application, 200+ lenders bidding for your business. See your real rate, your real payment, and your closing costs before you commit.</p>
+      <div class="actions">
+        <a href="../get-started.html" class="btn-gold">Start My Pre-Approval</a>
+        <a href="tel:9799773900" class="btn-outline">Call (979) 977-3900</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
