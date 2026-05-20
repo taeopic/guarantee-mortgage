@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Pre-Approved | Guarantee Mortgage, LLC</title>
+<meta name="description" content="Start your Texas mortgage pre-approval with Guarantee Mortgage. Multi-step application, 5 minutes, no SSN required to begin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Thin utility bar above main nav -->
+<div class="util-bar" aria-label="Utility links">
+  <div class="util-inner">
+    <div class="util-left">
+      <a class="util-link util-phone" href="tel:9799773900"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> College Station (979) 977-3900</a>
+      <span class="util-sep" aria-hidden="true"></span>
+      <a class="util-link util-phone" href="tel:2813855511">Mont Belvieu (281) 385-5511</a>
+    </div>
+    <div class="util-right">
+      <a class="util-link" href="learning-center.html">Learning Center</a>
+      <a class="util-link util-signin" href="contact.html"><svg width="11" height="12" viewBox="0 0 27 32" fill="currentColor" aria-hidden="true"><path d="M21.143 16q0 0.464-0.339 0.804l-9.714 9.714q-0.339 0.339-0.804 0.339t-0.804-0.339-0.339-0.804v-5.143h-8q-0.464 0-0.804-0.339t-0.339-0.804v-6.857q0-0.464 0.339-0.804t0.804-0.339h8v-5.143q0-0.464 0.339-0.804t0.804-0.339 0.804 0.339l9.714 9.714q0.339 0.339 0.339 0.804z"/></svg> Sign In</a>
+    </div>
+  </div>
+</div>
+<header class="site-nav solid">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-shield-g.png" alt="Guarantee Mortgage shield" class="nav-shield">
+      <span class="nav-divider" aria-hidden="true"></span>
+      <span class="nav-wordmark">
+        <span class="wm-top">GUARANTEE</span>
+        <span class="wm-sub">MORTGAGE COMPANY</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links hero-nav-links">
+        <li><a href="loan-options/index.html">Home Loans</a></li>
+        <li><a href="loan-options/first-time-home-buyer.html">Purchase</a></li>
+        <li><a href="loan-options/refinance.html">Refinance</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="rates.html">Rates</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="apply.html" class="nav-cta" aria-current="page">Apply Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Get Pre-Approved</div>
+    <h1>Start your application <em>in 5 minutes</em>.</h1>
+    <p>One short form. We will shop your file across 200+ wholesale lenders and call you back same business day with your real options.</p>
+  </div>
+</section>
+
+<section style="padding:70px 0 90px;background:var(--white);">
+  <div class="container apply-grid">
+
+    <!-- LEFT: Multi-step form scaffolding -->
+    <div class="apply-form-wrap reveal">
+
+      <!-- Progress bar in gold -->
+      <div class="apply-progress" aria-label="Application progress">
+        <div class="apply-progress-label">
+          <span class="apply-step-count">Step <strong>1</strong> of <strong>5</strong></span>
+          <span class="apply-step-name">Personal Info</span>
+        </div>
+        <div class="apply-progress-track">
+          <div class="apply-progress-fill" style="width:20%;"></div>
+        </div>
+        <ol class="apply-steps">
+          <li class="active"><span class="dot"></span><span>Personal</span></li>
+          <li><span class="dot"></span><span>Loan Type</span></li>
+          <li><span class="dot"></span><span>Property</span></li>
+          <li><span class="dot"></span><span>Finances</span></li>
+          <li><span class="dot"></span><span>Review</span></li>
+        </ol>
+      </div>
+
+      <div class="apply-form-card" id="apply-form-card">
+        <h2 class="apply-form-title">Tell us about you.</h2>
+        <p class="apply-form-sub">We start with the basics so a Texas loan officer can introduce themselves. No SSN required at this step.</p>
+
+        <form class="apply-form" id="apply-form" onsubmit="handleApplySubmit(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname">First Name</label>
+              <input id="fname" required type="text" autocomplete="given-name">
+            </div>
+            <div class="form-field">
+              <label for="lname">Last Name</label>
+              <input id="lname" required type="text" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" required type="email" autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" required type="tel" autocomplete="tel" placeholder="(979) 555-0100">
+            </div>
+          </div>
+          <div class="form-single form-field">
+            <label for="besttime">Best time to contact</label>
+            <select id="besttime">
+              <option>Any time, business hours</option>
+              <option>Morning (8am to 12pm)</option>
+              <option>Afternoon (12pm to 5pm)</option>
+              <option>Evening (5pm to 8pm)</option>
+              <option>Weekend</option>
+            </select>
+          </div>
+
+          <div class="apply-form-actions">
+            <button type="submit" class="btn btn-primary apply-continue">Continue to Step 2 &rarr;</button>
+            <span class="apply-callalt">Prefer to talk? <a href="tel:9799773900">Call (979) 977-3900</a></span>
+          </div>
+        </form>
+
+        <!-- TRUST STRIP -->
+        <div class="apply-trust-strip" aria-label="Privacy and security">
+          <span class="apply-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Secure
+          </span>
+          <span class="apply-trust-sep"></span>
+          <span class="apply-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            No SSN required at this step
+          </span>
+          <span class="apply-trust-sep"></span>
+          <span class="apply-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            No impact on credit
+          </span>
+        </div>
+      </div>
+
+      <!-- SUCCESS STATE (hidden until form submit) -->
+      <div class="apply-success-card" id="apply-success-card" hidden>
+        <div class="apply-success-check" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="11" stroke="#E6C976" stroke-width="2" fill="rgba(230,201,118,0.12)"/>
+            <path d="m7 12 3.5 3.5L17 9" stroke="#E6C976" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="apply-success-title">Thanks. Your loan officer is on the way.</h2>
+        <p class="apply-success-sub">A Texas loan officer will reach out within 1 business day to introduce themselves and walk you through next steps.</p>
+        <div class="apply-success-actions">
+          <a href="index.html" class="btn btn-primary apply-success-back">Back to home</a>
+          <a href="tel:9799773900" class="apply-success-call">Or call (979) 977-3900</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: What to expect -->
+    <aside class="apply-sidebar reveal">
+      <span class="section-eyebrow">What to Expect</span>
+      <h2 class="apply-side-title">A clear path, start to keys.</h2>
+      <ol class="apply-timeline">
+        <li>
+          <span class="apply-timeline-num">1</span>
+          <div>
+            <h4>Apply</h4>
+            <p>Five-step form, about 5 minutes. We collect the basics, no SSN required to start.</p>
+          </div>
+        </li>
+        <li>
+          <span class="apply-timeline-num">2</span>
+          <div>
+            <h4>Pre-Qualify</h4>
+            <p>A Texas loan officer reviews your file and calls you back same business day with options.</p>
+          </div>
+        </li>
+        <li>
+          <span class="apply-timeline-num">3</span>
+          <div>
+            <h4>Find Your Home</h4>
+            <p>Shop with confidence using your written pre-approval letter. Make real offers, not guesses.</p>
+          </div>
+        </li>
+        <li>
+          <span class="apply-timeline-num">4</span>
+          <div>
+            <h4>Lock Your Rate</h4>
+            <p>When the market gives you a number you like, we lock it through closing.</p>
+          </div>
+        </li>
+        <li>
+          <span class="apply-timeline-num">5</span>
+          <div>
+            <h4>Close</h4>
+            <p>Sign at the title company. We hand you the keys.</p>
+          </div>
+        </li>
+      </ol>
+    </aside>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="images/logo-primary.jpg" alt="Guarantee Mortgage, LLC" class="brand-logo brand-logo-footer"><div class="sub">LLC &middot; NMLS 279696 &middot; Dean Kennemer NMLS 248739</div><p>A family-owned Texas mortgage broker. We shop 200+ lenders on every loan so our clients close with confidence.</p></div>
+      <div class="footer-col">
+        <h5>Loan Programs</h5>
+        <ul>
+          <li><a href="loan-options/first-time-home-buyer.html">First-Time Buyer</a></li>
+          <li><a href="loan-options/va-home-loan.html">VA Home Loan</a></li>
+          <li><a href="loan-options/fha-home-loan.html">FHA Loan</a></li>
+          <li><a href="loan-options/usda-loan.html">USDA Loan</a></li>
+          <li><a href="loan-options/refinance.html">Refinance</a></li>
+          <li><a href="loan-options/index.html">All Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="learning-center.html">Learning Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="contact-line"><strong>College Station</strong>6744 Victoria Ave<br>College Station, TX 77845<br>(979) 977-3900</div>
+        <div class="contact-line"><strong>Mont Belvieu</strong>2770 N FM 565 Rd<br>Mont Belvieu, TX 77523<br>(281) 385-5511</div>
+        <div class="contact-line"><strong>Email</strong><a href="mailto:Team@guaranteemc.com">Team@guaranteemc.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div>&copy; 2026 Guarantee Mortgage, LLC. All rights reserved. Company NMLS 279696. Dean Kennemer NMLS 248739. Texas Department of Savings and Mortgage Lending license.</div>
+      <div class="eho"><span class="icon">EHO</span> Equal Housing Opportunity Lender</div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<style>
+.apply-success-card{
+  background: linear-gradient(135deg, #6B1A2A 0%, #4A0F1C 60%, #2B0810 100%);
+  color:#FBF7EE;
+  border:1px solid rgba(230,201,118,0.35);
+  border-radius:14px;
+  padding:48px 40px;
+  text-align:center;
+  box-shadow:0 18px 48px rgba(43,8,16,0.35);
+}
+.apply-success-check{display:flex;justify-content:center;margin-bottom:18px;}
+.apply-success-title{
+  font-family:"Fraunces", serif;
+  font-weight:500;
+  font-size:1.9rem;
+  line-height:1.18;
+  margin:0 0 12px;
+  color:#FBF7EE;
+}
+.apply-success-sub{
+  font-size:1.02rem;
+  line-height:1.55;
+  color:rgba(251,247,238,0.85);
+  max-width:480px;
+  margin:0 auto 28px;
+}
+.apply-success-actions{display:flex;flex-direction:column;gap:14px;align-items:center;}
+.apply-success-back{
+  background:#E6C976;
+  color:#2B0810;
+  border:0;
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:600;
+  letter-spacing:0.02em;
+  text-decoration:none;
+}
+.apply-success-back:hover{background:#F0D589;}
+.apply-success-call{color:rgba(251,247,238,0.75);text-decoration:none;font-size:0.95rem;}
+.apply-success-call:hover{color:#E6C976;}
+</style>
+<script>
+function handleApplySubmit(e){
+  e.preventDefault();
+  var card = document.getElementById('apply-form-card');
+  var success = document.getElementById('apply-success-card');
+  if(card){card.hidden = true; card.style.display = 'none';}
+  if(success){success.hidden = false; success.scrollIntoView({behavior:'smooth', block:'center'});}
+}
+</script>
+</body>
+</html>
