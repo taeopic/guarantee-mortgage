@@ -54,9 +54,20 @@
     </div>
   </header>
 
-  <section class="hero hero-split">
-    <!-- Left maroon column: headline + CTAs -->
-    <div class="hero-left">
+  <section class="hero hero-fullbleed">
+    <!-- Full-bleed video background with shimmer + burgundy gradient overlay -->
+    <div class="hero-media">
+      <video class="hero-drone-video" autoplay muted loop playsinline preload="metadata" poster="images/drone-start-frame.png" aria-label="Aerial drone footage of Aggieland, College Station Texas">
+        <source src="videos/hero-mobile.webm" type="video/webm" media="(max-width: 768px)">
+        <source src="videos/hero-drone.mp4" type="video/mp4">
+        <img src="images/drone-start-frame.png" alt="Aerial view of Aggieland with the Welcome to Aggieland water tower over College Station">
+      </video>
+      <div class="hero-shimmer" aria-hidden="true"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Foreground copy + CTAs sit on top of the video -->
+    <div class="hero-content">
       <h1 class="hero-headline">
         <span class="hh-line">Guiding You</span>
         <span class="hh-line">Home in</span>
@@ -74,16 +85,6 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </a>
       </div>
-    </div>
-
-    <!-- Right column: full-bleed drone video with maroon edge fade -->
-    <div class="hero-right">
-      <video class="hero-drone-video" autoplay muted loop playsinline preload="metadata" poster="images/drone-start-frame.png" aria-label="Aerial drone footage of Aggieland, College Station Texas">
-        <source src="videos/hero-mobile.webm" type="video/webm" media="(max-width: 768px)">
-        <source src="videos/hero-drone.mp4" type="video/mp4">
-        <img src="images/drone-start-frame.png" alt="Aerial view of Aggieland with the Welcome to Aggieland water tower over College Station">
-      </video>
-      <div class="hero-edge-fade" aria-hidden="true"></div>
     </div>
   </section>
 
