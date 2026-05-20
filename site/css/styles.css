@@ -174,6 +174,94 @@ h1, h2, h3, h4, h5 {
   .nav-toggle { display: block; }
   .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #4a0e15; flex-direction: column; padding: 22px 28px; gap: 18px; border-bottom: 1px solid rgba(212,173,95,0.25); }
   .nav-links.open { display: flex; }
+  .nav-cta { display: none; }
+}
+
+/* ============== UTILITY BAR (thin top strip above the main nav) ============== */
+/* Deep burgundy bar with phone numbers left, learning center + sign in right.
+   Mirrors the Sign In + Apply Now rhythm at the top of guaranteemc.com. */
+.util-bar {
+  background: #3a0a0f;
+  border-bottom: 1px solid rgba(212,173,95,0.18);
+  font-family: var(--sans);
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+}
+.util-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 8px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+.util-left, .util-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+.util-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.util-link:hover { color: #d4ad5f; }
+.util-link svg { color: #d4ad5f; opacity: 0.95; }
+.util-phone { font-weight: 600; }
+.util-sep {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: rgba(212,173,95,0.3);
+}
+.util-signin {
+  font-weight: 600;
+  color: #d4ad5f;
+}
+@media (max-width: 1100px) {
+  .util-inner { padding: 8px 22px; gap: 14px; }
+  .util-left { gap: 12px; flex-wrap: wrap; }
+  .util-right { gap: 12px; }
+  .util-link { font-size: 11px; }
+}
+@media (max-width: 720px) {
+  .util-left .util-sep,
+  .util-right .util-link:not(.util-signin) { display: none; }
+  .util-left .util-link:nth-child(3) { display: none; }
+}
+
+/* ============== NAV PRIMARY CTA (Apply Now button in main nav) ============== */
+/* Gold filled pill on the far right of the nav, mirrors theirs */
+.nav-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #d4ad5f;
+  color: #4a0e15;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1.5px solid #d4ad5f;
+  transition: background .2s, color .2s, transform .2s;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: #e6c477; color: #4a0e15; transform: translateY(-1px); }
+@media (max-width: 1400px) {
+  .nav-cta { padding: 9px 16px; font-size: 11px; letter-spacing: 0.12em; }
 }
 
 /* ============== HERO SPLIT (maroon left panel, video right) ============== */
@@ -391,6 +479,133 @@ h1, h2, h3, h4, h5 {
   .hv-col:last-child { border-bottom: 0; }
   .hero-headline { font-size: 40px; }
   .hero-left { padding: 48px 24px; }
+}
+
+/* ============== TRUST CALLOUT (elevated card overlapping hero) ============== */
+/* Mirrors guaranteemc.com's Bilt Rewards card that sits between hero and the loan grid.
+   Cream/cream-soft section bg, white floating card, gold accent badge. */
+.trust-callout {
+  background: #f4ecdc;
+  padding: 56px 24px 64px;
+  position: relative;
+  margin-top: -36px;
+  z-index: 10;
+}
+.trust-callout-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(74,14,21,0.16), 0 2px 6px rgba(74,14,21,0.06);
+  border: 1px solid rgba(212,173,95,0.35);
+  padding: 36px 44px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.trust-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5e1119, #8a2630);
+  color: #d4ad5f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(94,17,25,0.25);
+}
+.trust-body { min-width: 0; }
+.trust-eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a2630;
+  margin-bottom: 6px;
+}
+.trust-headline {
+  font-family: var(--display);
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 600;
+  color: #4a0e15;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.trust-headline span { color: #b8893a; font-style: italic; }
+.trust-sub {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: #4a4036;
+  margin: 0 0 14px;
+  max-width: 720px;
+}
+.trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: #f7f1e1;
+  border: 1px solid rgba(184,137,58,0.35);
+  border-radius: 100px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: #4a0e15;
+}
+.trust-pill strong {
+  color: #5e1119;
+  font-weight: 700;
+}
+.trust-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  background: #5e1119;
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+  white-space: nowrap;
+}
+.trust-cta:hover { background: #d4ad5f; color: #4a0e15; transform: translateY(-2px); }
+@media (max-width: 980px) {
+  .trust-callout-inner {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    padding: 28px 28px;
+    gap: 20px;
+  }
+  .trust-cta {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+  }
+}
+@media (max-width: 620px) {
+  .trust-callout { padding: 40px 16px 48px; margin-top: -24px; }
+  .trust-callout-inner {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    text-align: left;
+  }
+  .trust-badge { width: 56px; height: 56px; }
+  .trust-pills { gap: 6px; }
+  .trust-pill { font-size: 11px; padding: 5px 10px; }
 }
 
 /* ============== LEGACY BUTTONS (used by other sections, kept intact) ============== */
